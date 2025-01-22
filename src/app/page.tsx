@@ -4,7 +4,7 @@ import { useAuth } from "@/firebase/AuthContext";
 import Link from "next/link";
 
 export default function Home() {
-  const {user, loading} = useAuth()
+  const {user, _loading} = useAuth()
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
