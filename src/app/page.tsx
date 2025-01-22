@@ -1,5 +1,4 @@
 "use client";
-import Logout from "@/components/Logout";
 import { useAuth } from "@/firebase/AuthContext";
 import Typewriter from "@/utils/Typewirter";
 import Image from "next/image";
