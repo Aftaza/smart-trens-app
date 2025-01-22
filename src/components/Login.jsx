@@ -2,6 +2,7 @@ import { auth } from "@/firebase/Firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -13,6 +14,7 @@ const Login = () => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
+            toast.success('You\'re Logged in');
             route.push("/");
         } catch (error) {
             console.log("Error logging in: ", error);

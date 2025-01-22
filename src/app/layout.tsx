@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/firebase/AuthContext"
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   weight: "200",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased`}
       >
+        <Toaster position="top-center" />
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

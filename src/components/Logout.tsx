@@ -1,6 +1,7 @@
 import { useAuth } from "@/firebase/AuthContext"
 import { auth } from "@/firebase/Firebase"
 import { signOut } from "firebase/auth"
+import toast from "react-hot-toast"
 
 
 const Logout = () => {
@@ -9,6 +10,7 @@ const Logout = () => {
     const handleLogout = async () => {
       try {
         await signOut(auth)
+        toast.success('You\'re Logged out');
         console.log("User signed out")
       } catch (error) {
         console.error("Error signing out:", error)
