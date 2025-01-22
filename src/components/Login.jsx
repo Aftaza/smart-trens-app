@@ -9,7 +9,7 @@ const Login = () => {
     const [loginError, setLoginError] = useState("")
     const route = useRouter()
 
-    const handleLogin = async (e :any) => {
+    const handleLogin = async (e) => {
         e.preventDefault()
         try {
             await signInWithEmailAndPassword(auth, email, password)
